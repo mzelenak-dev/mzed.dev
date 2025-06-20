@@ -1,8 +1,8 @@
-import Pills from "@/components/Pills";
+import Employer from "@/components/Employer";
 
 export default function Home() {
   return (
-    <>
+    <div className="lg:flex lg:justify-between lg:gap-4 my-12">
       <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
         <div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"><a href="/">Matt Zelenak</a></h1>
@@ -60,85 +60,54 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main className="pt-24 lg:w-[52%] lg:py-24">
-        <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"></section>
-        <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-          <ul>
-            <li>
-              <div>2023 - PRESENT</div>
-              <div>
-                <h3>Consulting Software Engineer - Probability Consulting</h3>
-                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
-                <ul>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                </ul>
-              </div>
-              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
-            </li>
-            <li>
-              <div>2016 - 2023</div>
-              <div>
-                <h3>Senior Software Engineer - Salesforce</h3>
-                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
-                <ul>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                </ul>
-              </div>
-              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
-            </li>
-            <li>
-              <div>2014 - 2016</div>
-              <div>
-                <h3>Software Engineer - SmarterHQ</h3>
-                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
-                <ul>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                </ul>
-              </div>
-              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
-            </li>
-            <li>
-              <div>2012 - 2014</div>
-              <div>
-                <h3>Front End Engineer - MediaFuel</h3>
-                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
-                <ul>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                </ul>
-              </div>
-              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
-            </li>
-            <li>
-              <div>2011 - 2012</div>
-              <div>
-                <h3>Junior Engineer - IMAVEX</h3>
-                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
-                <ul>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                  <li>Project summary and quick details on accomplishments</li>
-                </ul>
-              </div>
-              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
-            </li>
+      <main className="lg:w-[52%] flex flex-col gap-16">
+        <section id="about" className="flex flex-col gap-2 lg:section-divider">
+          <p>I'm a dedicated software engineer with over 10 years of experience producing performant, scalable and optimized web applications that are tested, adhere to web standards and best practices, and are accessible by all users.</p>
+          <p>I have a passion for creating useful and intuitive applications that just work and never leave the user wondering what is happening. I love working with others to bring great ideas to life.</p>
+          <p>In my free time, I enjoy walking, weight lifting, playing music (guitar, bass, drums, keys), spending time with my family, exploring the outdoors, volunteering with organizations I trust, and laughing with my friends. I love reading, funny cartoons, compelling stories, and video games.</p>
+        </section>
+        <section id="experience" className="lg:section-divider">
+          <ul className="flex flex-col gap-10">
+            <Employer
+              name="COMPANY"
+              title="JOB TITLE"
+              years={[1900, 2000]}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
+              keywords={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+            />
+            <Employer
+              name="COMPANY"
+              title="JOB TITLE"
+              years={[1900, 2000]}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
+              keywords={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+            />
+            <Employer
+              name="COMPANY"
+              title="JOB TITLE"
+              years={[1900, 2000]}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
+              keywords={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+            />
+            <Employer
+              name="COMPANY"
+              title="JOB TITLE"
+              years={[1900, 2000]}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
+              keywords={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+            />
+            <Employer
+              name="COMPANY"
+              title="JOB TITLE"
+              years={[1900, 2000]}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
+              keywords={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+            />
           </ul>
         </section>
-        <section id="work" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"></section>
+        <section id="work"></section>
       </main>
       <footer></footer>
-    </>
+    </div>
   );
 }
