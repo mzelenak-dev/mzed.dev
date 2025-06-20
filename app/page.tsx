@@ -1,9 +1,11 @@
+import Pills from "@/components/Pills";
+
 export default function Home() {
   return (
     <>
       <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
         <div>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"><a href="/">Matthew "Zed" Zelenak</a></h1>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"><a href="/">Matt Zelenak</a></h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Software Engineer</h2>
           <p className="mt-4 max-w-xs leading-normal">I build scalable, performant, accessible, intuitive &amp; beautiful software that can run anywhere.</p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
@@ -94,7 +96,84 @@ export default function Home() {
           </li> */}
         </ul>
       </header>
-      <main></main>
+      <main>
+        <section id="about"></section>
+        <section id="experience">
+          <ul>
+            <li>
+              <div>2023 - PRESENT</div>
+              <div>
+                <h3>Consulting Software Engineer - Probability Consulting</h3>
+                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
+                <ul>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                </ul>
+              </div>
+              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
+            </li>
+            <li>
+              <div>2016 - 2023</div>
+              <div>
+                <h3>Senior Software Engineer - Salesforce</h3>
+                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
+                <ul>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                </ul>
+              </div>
+              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
+            </li>
+            <li>
+              <div>2014 - 2016</div>
+              <div>
+                <h3>Software Engineer - SmarterHQ</h3>
+                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
+                <ul>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                </ul>
+              </div>
+              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
+            </li>
+            <li>
+              <div>2012 - 2014</div>
+              <div>
+                <h3>Front End Engineer - MediaFuel</h3>
+                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
+                <ul>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                </ul>
+              </div>
+              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
+            </li>
+            <li>
+              <div>2011 - 2012</div>
+              <div>
+                <h3>Junior Engineer - IMAVEX</h3>
+                <p>primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description primary job description</p>
+                <ul>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                  <li>Project summary and quick details on accomplishments</li>
+                </ul>
+              </div>
+              <Pills list={['Typescript', 'HTML5', 'TailwindCSS', 'Next.js']} />
+            </li>
+          </ul>
+        </section>
+        <section id="work"></section>
+      </main>
       <footer></footer>
     </>
   );
