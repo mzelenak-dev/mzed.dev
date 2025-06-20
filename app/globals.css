@@ -17,3 +17,7 @@ body {
 .keyword-pill {
   background: var(--button-background);
 }
+
+.section-divider {
+  @apply pb-12 border-b-1;
+}
