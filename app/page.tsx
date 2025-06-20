@@ -1,38 +1,27 @@
 import Employer from "@/components/Employer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="lg:flex lg:justify-between lg:gap-4 my-12">
-      <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+    <div className="mx-auto w-full max-w-[1280px] lg:flex lg:justify-between lg:gap-4 my-12">
+      <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:py-24">
         <div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"><a href="/">Matt Zelenak</a></h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Software Engineer</h2>
-          <p className="mt-4 max-w-xs leading-normal">I build scalable, performant, accessible, intuitive &amp; beautiful software that can run anywhere.</p>
+          <p className="mt-4 leading-normal">Crafting scalable software with clarity, curiosity, and care—driven by clean architecture, deep collaboration, and a relentless commitment to quality, growth, and user experience.</p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
-            <ul className="mt-16 w-max">
+            <ul className="mt-16">
               <li>
-                <a className="group flex items-center py-3 active" href="#about">
-                  <span
-                    className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
-                  ></span>
-                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
-                </a>
+                <Link href="#about">About</Link>
               </li>
               <li>
-                <a className="group flex items-center py-3" href="#experience">
-                  <span
-                    className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
-                  ></span>
-                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
-                </a>
+                <Link href="#experience">Employers</Link>
               </li>
               <li>
-                <a className="group flex items-center py-3" href="#projects">
-                  <span
-                    className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
-                  ></span>
-                  <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
-                </a>
+                <Link href="#projects">Projects</Link>
+              </li>
+              <li>
+                <Link href="#writing">Writing</Link>
               </li>
             </ul>
           </nav>
@@ -60,10 +49,10 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main className="lg:w-[52%] flex flex-col gap-16">
+      <main className="flex flex-col gap-16">
         <section id="about" className="flex flex-col gap-2 lg:section-divider">
-          <p>As a senior front-end engineer with over a decade of experience, I specialize in building scalable, accessible, and high-performance web applications using modern frameworks like React, TypeScript, and Next.js. I bring a systems-thinking approach to UI architecture—crafting reusable, maintainable components that empower teams and stand the test of time. My work is grounded in empathy—for both users and fellow engineers—which drives my commitment to accessibility, thoughtful design, and clean developer experience. I take ownership of quality through rigorous testing practices, performance optimization, and an eye for detail. I thrive in cross-functional environments, translating complex requirements into intuitive interfaces, while mentoring teammates and contributing to a culture of technical excellence. Calm under pressure and curious by nature, I continuously seek out opportunities to grow, adapt, and help teams build software that truly delivers.</p>
-          <p>Outside of engineering, I enjoy building creative side projects that explore new front-end technologies and design systems. I have a passion for clean UI and accessible UX, which often spills into experimenting with Figma, motion design, and typography. I study music theory and play guitar, drums and keyboards (poorly). To maintain balance, I meditate regularly and stay active through weight training and walking/hiking. I also enjoy the process of growing my own food, trying new coffee beans, and cooking healthy, nourishing meals. I love to read of science fiction, biography and systems-thinking books, and I occasionally write technical content and reflections on software, process, and growth. In downtime, I gravitate toward immersive storytelling and open-world exploration in games like The Legend of Zelda: Breath of the Wild / Tears of the Kingdom.</p>
+          <p>As a senior front-end engineer with 10+ years of experience, I build scalable, accessible, high-performance web apps with React, TypeScript, and Next.js. I focus on reusable UI systems, clean developer experience, and accessible design. I take ownership through testing, performance tuning, and attention to detail. I thrive in cross-functional teams, turning complex needs into intuitive interfaces while mentoring others and promoting technical excellence.</p>
+          <p>Outside of engineering, I build side projects that explore new technologies. I’m passionate about clean UI &amp; accessible UX. To stay balanced I study and play music, meditate, lift weights, walk, and hike. I grow my own food, try new coffee beans, and cook healthy meals. I enjoy reading science fiction &amp; biographies, and occasionally write content. In downtime, I enjoy games like The Legend of Zelda: Breath of the Wild.</p>
         </section>
         <section id="experience" className="lg:section-divider">
           <ul className="flex flex-col gap-10">
@@ -106,7 +95,6 @@ export default function Home() {
         </section>
         <section id="work"></section>
       </main>
-      <footer></footer>
     </div>
   );
 }
