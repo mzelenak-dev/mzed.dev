@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "./globals.css";
 import { Inter } from 'next/font/google'
 
@@ -16,14 +15,8 @@ export const metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased bg-gradient leading-relaxed text-slate-400 selection:selected-text`}
-      >
-        <div className="relative">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
-            {children}
-          </div>
-        </div>
+      <body className={`${inter.className} antialiased bg-gradient relative mx-auto h-full w-full px-6`}>
+        {children}
       </body>
     </html>
   );

@@ -14,9 +14,9 @@ const Employer = ({name, title, years, description, keywords}: EmployerProps) =>
     <li className="flex flex-col">
       <div>
         <h3 className="flex items-center leading-snug">
-          <span className="font-bold text-lg">{name}</span>
+          <span className="text-gray-100 font-bold text-lg">{name}</span>
           <span aria-hidden="true" className="mx-2">•</span>
-          <span>{title}</span>
+          <span className='text-accent'>{title}</span>
           <span aria-hidden="true" className="mx-2">•</span>
           <span className="italic">{`${years[0]} - ${years[1]}`}</span>
         </h3>
