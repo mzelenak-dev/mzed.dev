@@ -1,8 +1,9 @@
 import React from 'react'
+import genListKey from '@/lib/utils';
 
 const Pills = ({list}) => {
-  const pills = list.map((item) => (
-     <p className="keyword-pill">{item}</p>
+  const pills = list.map((item, index) => (
+     <p key={`item-${index}-${genListKey()}`} className="keyword-pill">{item}</p>
   ));
   
   return (
