@@ -1,45 +1,9 @@
 @import "tailwindcss";
 
-:root {
-  /* Base Background / Foreground */
-  --bg:   #1a1b26;  /* editor background */
-  --fg:   #a9b1d6;  /* main text */
+:root {}
 
-  /* Primary accents */
-  --primary:     #7aa2f7; /* blue – function names, headings */
-  --secondary:   #7dcfff; /* cyan – import/exports, links */
-  --heading:     #f1f5f9; /* contrasting white for standout headings */
-  --accent:      #bb9af7; /* magenta – keywords */
-  --success:     #9ece6a; /* green – strings, confirmations */
-  --warning:     #e0af68; /* yellow – warnings */
-  --danger:      #f7768e; /* red – errors/alerts */
-
-  /* UI tones */
-  --muted:       #565f89; /* comments, disabled states */
-  --surface:     #24283b; /* panels, cards */
-  --highlight:   #2ac3de; /* lighter cyan – hover, active */
-}
-
-body {
-  /* background: radial-gradient(circle,rgba(36, 40, 59, 1) 0%, rgba(26, 27, 38, 1) 100%); */
-  background: var(--bg);
-  background: linear-gradient(
-  135deg,
-  #1a1b26 0%,     /* Tokyo Night background */
-  #1e202e 50%,    /* slightly lighter */
-  #2a2e3e 100%    /* cool-toned dark blue */
-);
-  color: var(--primary);
-}
+body {}
 
 .keyword-pill {
   background: var(--color-pill-bg);
 }
-
-/* optional: add dark/light toggling
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --bg:   #e6e7ed;
-    --fg:   #40434f;
-  }
-} */
