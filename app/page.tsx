@@ -9,28 +9,18 @@ export default function Home() {
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
           <div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"><a href="/">Matt Zelenak</a></h1>
-            <div className="absolute top-0 right-0 lg:top-auto lg:right-auto lg:bottom-0 lg:left-0">
-              <SocialButtons />
-            </div>
             <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Full Stack Engineer</h2>
             <p className="mt-4 max-w-xs leading-normal">Building scalable, human-centered applications that bridge business goals with seamless user experiences.</p>
-            <nav aria-label="In-page jump links">
-              <ul className="mt-16">
-                <li>
-                  <Link href="#about">About</Link>
-                </li>
-                <li>
-                  <Link href="#experience">Employers</Link>
-                </li>
-                <li>
-                  <Link href="#projects">Projects</Link>
-                </li>
-                <li>
-                  <Link href="#writing">Writing</Link>
-                </li>
+            <nav className="nav hidden lg:block" aria-label="In-page jump links">
+              <ul className="mt-16 w-max">
+                <li><Link href="#about">About</Link></li>
+                <li><Link href="#experience">Employers</Link></li>
+                <li><Link href="#projects">Projects</Link></li>
+                <li><Link href="#writing">Writing</Link></li>
               </ul>
             </nav>
           </div>
+          <SocialButtons />
         </header>
         <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
           <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
