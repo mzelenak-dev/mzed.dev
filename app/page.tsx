@@ -5,6 +5,7 @@ import SocialButtons from "@/components/SocialButtons";
 import Link from "next/link";
 import useSpotlight from "@/hooks/useSpotlight";
 import BlogList from "@/components/BlogList";
+import HamburgerButton from "@/components/HamburgerButton";
 
 export default function Home() {
   useSpotlight();
@@ -14,10 +15,15 @@ export default function Home() {
       <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
           <div>
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-              <Link href="/" >Matt Zelenak</Link>
-            </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Full Stack Engineer</h2>
+            <div className="flex items-center justify-between items-start md:items-center">
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Matt Zelenak</h1>
+                <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Full Stack Engineer</h2>
+              </div>
+              <div className="block lg:hidden">
+                <HamburgerButton />
+              </div>
+            </div>
             <p className="mt-4 lg:max-w-xs max-w-full leading-normal">Building scalable, human-centered applications that bridge business goals with seamless user experiences.</p>
             <nav className="nav hidden lg:block">
               <ul className="mt-16 w-max">
@@ -28,7 +34,9 @@ export default function Home() {
               </ul>
             </nav>
           </div>
-          <SocialButtons />
+          <div className="hidden md:block">
+            <SocialButtons />
+          </div>
         </header>
         <main id="content" className="lg:w-[52%] pt-10 lg:pt-24 lg:py-24">
           <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 relative z-[1]">
