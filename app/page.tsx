@@ -8,18 +8,17 @@ import SocialButtons from "@/components/SocialButtons";
 export default function Home() {
   useEffect(() => {
     const spotlight = document.getElementById('spotlight-overlay') as HTMLElement;
-    const startSpotlight = (e:MouseEvent) => {
+    const spotlightEffect = (e:MouseEvent) => {
       spotlight.style.setProperty('--mouse-x', `${e.clientX}px`);
       spotlight.style.setProperty('--mouse-y', `${e.clientY}px`);
-    });
-
+    }
     
-    document.addEventListener("mousemove", startSpotlight);
+    document.addEventListener("mousemove", spotlightEffect);
 
     return () => {
-      document.removeEventListener("mousemove", startSpotlight);
+      document.removeEventListener("mousemove", spotlightEffect);
     }
-  })
+  }, []);
 
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
