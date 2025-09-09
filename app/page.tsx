@@ -1,11 +1,13 @@
 'use client';
 
-import Link from "next/link";
 import { useEffect } from "react";
 import Employer from "@/components/Employer";
 import SocialButtons from "@/components/SocialButtons";
+import Link from "next/link";
+import Image from "next/image";
+import genListKey from "@/lib/utils";
 
-export default function Home() {
+export default function Home({ blogPosts }) {
   useEffect(() => {
     const spotlight = document.getElementById('spotlight-overlay') as HTMLElement;
     const spotlightEffect = (e:MouseEvent) => {
@@ -33,7 +35,7 @@ export default function Home() {
             <nav className="nav hidden lg:block" aria-label="In-page jump links">
               <ul className="mt-16 w-max">
                 <li><Link href="#about">About</Link></li>
-                <li><Link href="#experience">Employers</Link></li>
+                <li><Link href="#work">Employers</Link></li>
                 <li><Link href="#projects">Projects</Link></li>
                 <li><Link href="#writing">Writing</Link></li>
               </ul>
@@ -100,6 +102,30 @@ export default function Home() {
                 list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
               />
             </ul>
+          </section>
+          <section id="writing" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+            <div className="sticky top-0 z-20 -mx-5 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">WRITING</h2>
+              <ul id="blogposts" className="z-1">
+                {blogPosts?.map((post) => (
+                  <li className="max-w-2.5 h-3.5 border-2 border-amber-500">
+                    <Link
+                      href={post.path}  
+                      key={`${post.path}-${genListKey()}`}
+                    >
+                      <Image
+                        src={post.path}
+                        width={500}
+                        height={500}
+                        alt="alt for image"
+                      />
+                <h3>{post.slug}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque</p>
+                </Link>
+                </li>
+                ))}
+              </ul>
+            </div>
           </section>
         </main>
       </div>
