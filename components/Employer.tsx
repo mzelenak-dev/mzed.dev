@@ -1,15 +1,15 @@
 import React from 'react'
-import KeywordPills from "@/components/KeywordPills";
+import Pills from './Pills';
 
 type EmployerProps = {
   name: string;
   title: string;
   years: number[];
   description: string;
-  keywords: string[];
+  list: string[];
 }
 
-const Employer = ({name, title, years, description, keywords}: EmployerProps) => {
+const Employer = ({name, title, years, description, list}: EmployerProps) => {
   return (
     <li className="mb-12">
       <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -35,7 +35,7 @@ const Employer = ({name, title, years, description, keywords}: EmployerProps) =>
             </div>
          </h3>
          <p className="mt-2 text-sm leading-normal">{description}</p>
-         <KeywordPills keywords={keywords} />
+         <Pills list={list} />
       </div>
    </div>
 </li>

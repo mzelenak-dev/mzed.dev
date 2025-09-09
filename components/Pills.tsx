@@ -1,12 +1,12 @@
 import React from 'react'
 import genListKey from '@/lib/utils';
 
-type KeywordPillsProps = {
-  keywords: string[];
+type PillsProps = {
+  list: string[];
 }
 
-const KeywordPills = ({keywords}: KeywordPillsProps) => {
-  const pills = keywords.map((item, index) => (
+const Pills = ({list}: PillsProps) => {
+  const pills = list.map((item, index) => (
     <li
       key={`item-${index}-${genListKey()}`}
       className="px-3 py-1 text-xs text-white rounded-full keyword-pill"
@@ -22,4 +22,4 @@ const KeywordPills = ({keywords}: KeywordPillsProps) => {
   )
 }
 
-export default KeywordPills
+export default Pills

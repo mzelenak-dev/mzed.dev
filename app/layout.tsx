@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-gradient relative mx-auto h-full w-full px-6 text-slate-400 bg-slate-900 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}>
+      <body className={`${inter.className} antialiased bg-gradient relative mx-auto h-full w-full px-5 py-4 text-slate-400 bg-slate-900 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}>
         <div id="spotlight-overlay" className="hidden lg:block"></div>
         {children}
       </body>
