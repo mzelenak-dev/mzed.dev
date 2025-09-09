@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
-:root {}
-
-body {}
-
 .keyword-pill {
   background: var(--color-pill-bg);
+}
+
+#spotlight-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allows interaction with elements beneath */
+  background: radial-gradient(
+    circle 800px at var(--mouse-x) var(--mouse-y),
+    #112350,
+    #0f172a
+  );
 }
