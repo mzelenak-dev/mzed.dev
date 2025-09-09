@@ -3,7 +3,7 @@ import Image from "next/image";
 import genListKey from "@/lib/utils";
 
 export default function BlogList({ blogPosts }) {
-  
+  console.log(`blogPosts is ${blogPosts}`)
   return (
     <ul id="blogposts" className="z-1">
       { blogPosts && blogPosts.map((post) => (
