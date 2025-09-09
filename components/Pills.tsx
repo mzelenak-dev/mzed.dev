@@ -9,14 +9,16 @@ const Pills = ({list}: PillsProps) => {
   const pills = list.map((item, index) => (
     <li
       key={`item-${index}-${genListKey()}`}
-      className="px-3 py-1 text-xs text-white rounded-full keyword-pill"
+      className="mr-1.5 mt-2"
     >
-      {item}
+      <div className='flex items-center rounded-xl bg-teal-400/10 px-3 py-2 text-xs md:font-medium text-teal-300'>
+        {item}
+      </div>
     </li>
   ));
   
   return (
-    <ul className='flex flex-wrap gap-2 mt-5'>
+    <ul className='mt-2 flex flex-wrap gap-2'>
       {pills}
     </ul>
   )
