@@ -4,7 +4,7 @@ categories:
 - conservation
 - Himalayas
 date: 2025-09-09
-image: "https://upload.wikimedia.org/wikipedia/commons/0/09/Snow_leopard_portrait.jpg"
+image: ""
 tags:
 - snow leopard
 - endangered

@@ -4,7 +4,7 @@ categories:
 - oceans
 - climate
 date: 2025-09-09
-image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Coral_reef_in_Palau.jpg"
+image: ""
 tags:
 - coral reef
 - biodiversity

@@ -4,7 +4,7 @@ categories:
 - climate
 - Amazon
 date: 2025-09-09
-image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Amazon_Manaus_forest.jpg"
+image: ""
 tags:
 - rainforest
 - deforestation
