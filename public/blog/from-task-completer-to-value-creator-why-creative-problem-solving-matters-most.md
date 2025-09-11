@@ -5,6 +5,7 @@ tags: ["Software Engineering", "Creative Problem Solving", "Business Impact"]
 title: "From Task Completer to Value Creator: Why Creative Problem Solving Matters Most"
 iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7369086222255747072"
 image: "/img/instruction.jpg"
+readingTime: "3 min"
 ---
 
 # From Task Completer to Value Creator: Why Creative Problem Solving Matters Most

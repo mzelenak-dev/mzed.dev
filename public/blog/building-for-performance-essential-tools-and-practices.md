@@ -6,6 +6,7 @@ tags: ["Performance Optimization", "Lazy Loading", "Code Splitting", "Asset Redu
 title: "Building for Performance: Essential Tools and Practices"
 iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7344076387726606336?collapsed=1"
 image: "/img/cat-dad.jpeg"
+readingTime: "3 min"
 ---
 
 # Building for Performance: Essential Tools and Practices

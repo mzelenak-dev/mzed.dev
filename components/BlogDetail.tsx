@@ -23,8 +23,10 @@ export default function BlogDetail({ post }: { post: Post }) {
         })
       : post.date.toLocaleDateString();
 
+      console.log(post);
+
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-100">
+    <main className="min-h-screen text-slate-100">
       {/* Page container */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-20">
         <article className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 lg:gap-16">
@@ -44,23 +46,11 @@ export default function BlogDetail({ post }: { post: Post }) {
                   {post.title}
                 </span>
               </div>
-
-              <div className="flex items-center gap-4">
-                <time
-                  dateTime={new Date(post.date).toISOString()}
-                  className="text-sm text-slate-400"
-                >
-                  {formattedDate}
-                </time>
-                {post.readingTime && (
-                  <span className="text-sm text-slate-400">· {post.readingTime}</span>
-                )}
-              </div>
             </div>
 
             {/* Hero card */}
             <div
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-800/60 to-slate-900/40 shadow-lg"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-800/60 to-slate-900/40 shadow-lg mb-[0px]"
               aria-hidden={!post.image}
             >
               {post.image ? (
@@ -81,42 +71,37 @@ export default function BlogDetail({ post }: { post: Post }) {
                 </div>
               )}
 
-              <header className="absolute left-6 right-6 bottom-6 sm:bottom-8">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-slate-50 drop-shadow-md">
-                  {post.title}
-                </h1>
-                {post.excerpt && (
-                  <p className="mt-2 text-sm text-slate-300 max-w-2xl">{post.excerpt}</p>
-                )}
-              </header>
+              <div className="relative">
+                <div className="inset-0 bg-black bg-opacity-35 p-8">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-slate-50 drop-shadow-md color-white">
+                    {post.title}
+                  </h1>
+                  <div className="flex items-center justify-between mt-5 mx-1">
+                    <time
+                      dateTime={new Date(post.date).toISOString()}
+                      className="text-sm text-slate-400"
+                    >
+                      {formattedDate}
+                    </time>
+                   
+                    {post.readingTime && (
+                      <span className="text-sm text-slate-400">· {post.readingTime}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              {post.excerpt && (
+                <p className="mt-2 text-sm text-slate-300 max-w-2xl italic">{post.excerpt?.slice(0, 50)}&hellip;</p>
+              )}
+
             </div>
 
             {/* Article body card */}
-            <div className="prose prose-invert max-w-none bg-slate-900/40 rounded-xl p-6 sm:p-8 shadow-inner">
-              {/* tags & categories row */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {post.categories?.map((c) => (
-                  <span
-                    key={c}
-                    className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-teal-300"
-                  >
-                    {c}
-                  </span>
-                ))}
-
-                {post.tags?.map((t) => (
-                  <span
-                    key={t}
-                    className="inline-flex items-center px-2 py-0.5 rounded text-xs text-slate-300 bg-slate-800/20"
-                  >
-                    #{t}
-                  </span>
-                ))}
-              </div>
-
+            <div className="prose prose-invert max-w-none rounded-xl p-6 sm:p-8 shadow-inner">
               {/* actual content (assumes sanitized HTML) */}
               <div
-                className="leading-relaxed text-slate-200 prose-a:text-teal-300 prose-a:no-underline hover:prose-a:underline"
+                className="leading-relaxed text-slate-200 prose-a:text-teal-300 prose-a:no-underline hover:prose-a:underline flex flex-col gap-5"
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
 
@@ -177,25 +162,28 @@ export default function BlogDetail({ post }: { post: Post }) {
 
               {/* Table of contents (optional) */}
               <nav className="rounded-xl bg-slate-800/20 p-4 text-sm text-slate-300 sticky top-28 shadow-inner">
-                <div className="text-xs text-slate-400 uppercase mb-3">On this page</div>
-                <ul className="space-y-2">
-                  {/* Replace with auto-generated TOC */}
-                  <li>
-                    <Link href="#overview" className="hover:text-white block">
-                      Overview
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#best-practices" className="hover:text-white block">
-                      Best practices
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#tools" className="hover:text-white block">
-                      Tools
-                    </Link>
-                  </li>
-                </ul>
+                <div className="flex flex-wrap flex-col gap-2 mb-4 text-sm">
+                  Categories: 
+                  {post.categories?.map((c) => (
+                    <span
+                      key={c}
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-teal-300 w-auto"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap flex-col gap-2 mb-4 text-sm">
+                  Tags: 
+                  {post.tags?.map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center px-2 py-0.5 rounded text-xs text-slate-300 bg-slate-800/20 w-auto"
+                    >
+                      #{t}
+                    </span>
+                  ))}
+                </div>
               </nav>
 
               {/* Related posts */}

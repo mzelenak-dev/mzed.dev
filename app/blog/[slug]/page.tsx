@@ -5,7 +5,6 @@ import html from "remark-html";
 import { remark } from "remark";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
-import rehypeSanitize from "rehype-sanitize";
 import BlogDetail from "@/components/BlogDetail";
 
 type BlogFrontmatter = {
@@ -39,14 +38,15 @@ export default async function BlogPost({params,}: {
   // Convert markdown to safe HTML
   const processedHtml = await remark()
     .use(html)
-    .use(rehypeSanitize) // sanitize HTML
+    // .use(rehypeSanitize) // sanitize HTML
     .process(content);
 
   const htmlContent = processedHtml.toString();
+  console.log(`processedHtml is ${processedHtml}`)
 
   const post: BlogPost = {
     frontmatter,
-    html: htmlContent,
+    html: htmlContent || content,
   };
 
   return <BlogDetail post={{ ...post.frontmatter, html: post.html }} />;

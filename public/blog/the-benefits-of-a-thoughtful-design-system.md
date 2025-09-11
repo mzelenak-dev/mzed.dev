@@ -5,6 +5,7 @@ tags: ["Component Libraries", "UI/UX", "Web Development"]
 title: "The Benefits of a Thoughtful Design System"
 iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7346271997477167104?collapsed=1"
 image: "/img/designsystem.jpeg"
+readingTime: "3 min"
 ---
 
 # The Benefits of a Thoughtful Design System

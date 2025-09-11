@@ -5,6 +5,7 @@ tags: ["customer-experience", "profitability", "web-performance",]
 title: "How Frontend Engineers Drive Revenue and Profitability"
 iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7368009487674195968?collapsed=1"
 image: "/img/engineer.jpeg"
+readingTime: "3 min"
 ---
 
 # How Frontend Engineers Drive Revenue and Profitability
