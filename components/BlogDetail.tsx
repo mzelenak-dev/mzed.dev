@@ -28,12 +28,12 @@ export default function BlogDetail({ post }: { post: Post }) {
   return (
     <main className="min-h-screen text-slate-100">
       {/* Page container */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-20">
+      <div className="max-w-7xl mx-auto">
         <article className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 lg:gap-16">
           {/* Left column — content */}
           <section className="space-y-8">
             {/* Breadcrumb / meta row */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 hidden md:block">
               <div className="flex items-center gap-3 text-sm text-slate-400">
                 <Link
                   href="/blog"
@@ -98,7 +98,7 @@ export default function BlogDetail({ post }: { post: Post }) {
             </div>
 
             {/* Article body card */}
-            <div className="prose prose-invert max-w-none rounded-xl p-6 sm:p-8 shadow-inner">
+            <div className="prose prose-invert max-w-none rounded-xl p-2 shadow-inner">
               {/* actual content (assumes sanitized HTML) */}
               <div
                 className="leading-relaxed text-slate-200 prose-a:text-teal-300 prose-a:no-underline hover:prose-a:underline flex flex-col gap-5"

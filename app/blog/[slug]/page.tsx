@@ -38,7 +38,6 @@ export default async function BlogPost({params,}: {
   // Convert markdown to safe HTML
   const processedHtml = await remark()
     .use(html)
-    // .use(rehypeSanitize) // sanitize HTML
     .process(content);
 
   const htmlContent = processedHtml.toString();
