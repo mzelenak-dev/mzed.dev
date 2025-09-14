@@ -33,7 +33,7 @@ export default function BlogDetail({ post }: { post: Post }) {
           {/* Left column — content */}
           <section className="space-y-8">
             {/* Breadcrumb / meta row */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 hidden md:block">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 hidden md:block mb-4">
               <div className="flex items-center gap-3 text-sm text-slate-400">
                 <Link
                   href="/blog"
@@ -98,8 +98,7 @@ export default function BlogDetail({ post }: { post: Post }) {
             </div>
 
             {/* Article body card */}
-            <div className="prose prose-invert max-w-none rounded-xl p-2 shadow-inner">
-              {/* actual content (assumes sanitized HTML) */}
+            <div className="lg:p-5 pb-0 pt-8">
               <div
                 className="leading-relaxed text-slate-200 prose-a:text-teal-300 prose-a:no-underline hover:prose-a:underline flex flex-col gap-5"
                 dangerouslySetInnerHTML={{ __html: post.html }}
