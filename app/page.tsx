@@ -57,39 +57,32 @@ export default function Home() {
             <StickySectionHeader sectionTitle="EMPLOYMENT" />
             <ul className="flex flex-col gap-10 px-1">
               <Employer
-                name="COMPANY"
-                title="JOB TITLE"
-                years={[1900, 2000]}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
-                list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+                name="Probability Consulting"
+                title="Full Stack Software Engineer"
+                years={[2013, 2025]}
+                description="As a full-stack engineer at a small Indianapolis-based consulting startup, I designed and delivered end-to-end front-end applications while leading deployment, troubleshooting, and cloud-based DevOps on AWS and Azure. I contributed to mobile application development, ensuring seamless user experiences across platforms, and streamlined workflows for multiple clients. Leveraging modern full-stack practices, I consistently built scalable, maintainable, and high-performing solutions tailored to diverse business needs."
+                list = {['JavaScript (ES6+)', 'TypeScript','React', 'Next.js', 'Redux', 'TailwindCSS', 'CSS3', 'Design Systems', 'Storybook', 'Vite', 'Jest', 'React Testing Library', 'Cypress', 'Playwright', 'Vitest', 'ESLint', 'Storybook/Testing', 'Github Actions']}
               />
               <Employer
-                name="COMPANY"
-                title="JOB TITLE"
-                years={[1900, 2000]}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
-                list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+                name="Salesforce"
+                title="Sr. Software Engineer - Full Stack"
+                years={[2016, 2023]}
+                description="As a senior front-end full-stack engineer at Salesforce, I led the modernization of enterprise applications with React, TypeScript, and GraphQL while advancing design systems, accessibility, and performance. I championed best practices in testing, CI/CD, and cloud deployment, ensuring reliable, scalable, and high-performing releases across teams. Looking ahead, I bring expertise in serverless architectures, AI-driven development, and edge computing to future-proof front-end engineering at scale."
+                list = {['JavaScript (ES6+)', 'TypeScript','React', 'Next.js', 'Svelte', 'GraphQL', 'Redux', 'Zustand', 'TailwindCSS', 'CSS3', 'SASS / SCSS', 'Styled Components', 'Design Systems', 'Storybook', 'Webpack', 'Vite', 'Babel', 'jQuery', 'Jest', 'React Testing Library', 'Cypress', 'Playwright', 'Vitest', 'ESLint', 'Storybook/Testing', 'Github Actions']}
               />
               <Employer
-                name="COMPANY"
-                title="JOB TITLE"
-                years={[1900, 2000]}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
-                list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+                name="SmarterHQ"
+                title="Front End Software Engineer"
+                years={[2014, 2016]}
+                description="During my time building and maintaining the prediction engine, I designed and deployed full-stack applications using Angular and React on the front end, with a C#/.NET backend powered by SQL Server and REST APIs. I leveraged AWS services including EC2, Lambda, S3, CloudFormation, and API Gateway, integrating machine learning models while implementing CI/CD pipelines, DevOps best practices, and automated testing with Mocha and NUnit. Working in Agile and Scrum environments, I optimized performance, ensured scalability, and delivered reliable, enterprise-grade predictive solutions."
+                list={['AWS','CloudFormation','EC2','S3','Lambda','API Gateway','Angular','React','Redux','JavaScript','HTML5','CSS3','SASS','Webpack','Babel','C#','.NET Framework','ASP.NET','SQL Server','REST APIs','Unit Testing','Mocha','NUnit','CICD','Pipelines','DevOps','Git','GitHub','Agile','Scrum','Continuous Integration','Continuous Deployment','Microservices','Performance Optimization','Machine Learning Integration']}
               />
               <Employer
-                name="COMPANY"
-                title="JOB TITLE"
-                years={[1900, 2000]}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
-                list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
-              />
-              <Employer
-                name="COMPANY"
-                title="JOB TITLE"
-                years={[1900, 2000]}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sem a nisl faucibus vulputate. Sed sed magna nec neque venenatis sodales. Vivamus volutpat tortor elit. Aenean tristique risus vitae tristique condimentum. Mauris diam sapien, dapibus mattis neque at, molestie elementum neque."
-                list={['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item']}
+                name="Media Fuel"
+                title="Wordpress & Media Developer"
+                years={[2012, 2014]}
+                description="During my time at the startup, I led the development of client web domains and mobile tools, combining front-end and back-end technologies to deliver fully functional, responsive applications. I produced and managed 4K/UHD media campaigns, handling video editing, motion graphics, and audio mixing to create high-quality visual content. Collaborating closely with clients, I integrated content management, optimized performance, and ensured seamless deployment, consistently delivering innovative, polished digital experiences tailored to diverse business needs."
+                list={['WordPress','PHP','MySQL','HTML5','CSS3','JavaScript','jQuery','Photoshop','After Effects','Premiere Pro','Final Cut Pro','Avid Media Composer','4K Cameras','HD Cameras','Lighting Setup','Audio Mixing','Video Editing','Motion Graphics','Content Management','Video Compression']}
               />
             </ul>
           </section>
@@ -98,9 +91,6 @@ export default function Home() {
             <BlogList />
           </section>
         </main>
-        <footer className="bg-black w-auto h-10">
-
-        </footer>
       </div>
     </div>
   );
