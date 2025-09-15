@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-m2: 56rem;
+}
+
 #spotlight-overlay {
   position: fixed;
   top: 0;

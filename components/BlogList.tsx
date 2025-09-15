@@ -1,44 +1,14 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Image from "next/image";
 import genListKey from "@/lib/utils";
-
-type BlogPost = {
-  slug: string;
-  title: string;
-  date: string;
-  categories: string[];
-  tags: string[];
-  image: string;
-  content: string;
-};
+import GetBlogList from '@/lib/blog';
 
 export default function BlogList() {
-  const blogDir = path.join(process.cwd(), "public/blog");
-  const files = fs.readdirSync(blogDir);
-  const posts: BlogPost[] = files
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => {
-      const filePath = path.join(blogDir, file);
-      const fileContents = fs.readFileSync(filePath, "utf-8");
-      const { data, content } = matter(fileContents);
-
-      return {
-        content,
-        date: new Date(data.date).toLocaleDateString("en-US") || "",
-        tags: data.tags || [],
-        image: data.image || null,
-        title: data.title || "Untitled",
-        slug: file.replace(/\.md$/, ""),
-        categories: data.categories || [],
-      };
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // newest first
+  const blogList = GetBlogList();
+  blogList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // newest first
 
   return (
     <section id="blog-posts" className="space-y-8 flex flex-col">
-      {posts.map((post) => (
+      {blogList.map((post) => (
         <a key={genListKey()} href={`/blog/${post.slug}`}>
           <article className="p-5 rounded-lg bg-slate-800/50">
             <div className="w-full h-[200px] rounded-md overflow-hidden">

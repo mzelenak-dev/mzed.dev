@@ -2,34 +2,40 @@
 
 import Employer from "@/components/Employer";
 import SocialButtons from "@/components/SocialButtons";
-import Link from "next/link";
+import NavigationList from "@/components/NavigationList";
 import HamburgerButton from "@/components/HamburgerButton";
 import BlogList from "@/components/BlogList";
 import StickySectionHeader from "@/components/StickySectionHeader";
 
 export default function Home() {
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl py-6 font-sans md:px-12 md:py-16 lg:py-0">
+    <div className="mx-auto min-h-screen max-w-screen-xl font-sans m2:p-6 xl:p-0">
       <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
           <div>
             <div className="flex justify-between items-start md:items-center">
               <div>
-                <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Matt Zelenak</h1>
-                <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Full Stack Engineer</h2>
+                <h1 className="text-4xl font-bold tracking-tight text-slate-200">Matt Zelenak</h1>
+                <h2 className="mt-3 text-xl font-medium tracking-tight text-slate-200">Full Stack Engineer</h2>
               </div>
-              <div className="block lg:hidden">
+              <div className="block md:hidden">
                 <HamburgerButton />
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <NavigationList
+                  orientation='row'
+                  spacing={6}
+                />
               </div>
             </div>
             <p className="mt-4 lg:max-w-xs max-w-full leading-normal">Building scalable, human-centered applications that bridge business goals with seamless user experiences.</p>
-            <nav className="nav hidden lg:block">
-              <ul className="mt-16 w-max">
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#work">Employers</Link></li>
-                <li><Link href="#projects">Projects</Link></li>
-                <li><Link href="#writing">Writing</Link></li>
-              </ul>
+            <nav className="nav hidden lg:block w-max mt-16">
+              <div className="hidden md:block">
+                <NavigationList
+                  orientation='col'
+                  spacing={6}
+                />
+              </div>
             </nav>
           </div>
           <div className="hidden md:block">
@@ -92,6 +98,9 @@ export default function Home() {
             <BlogList />
           </section>
         </main>
+        <footer className="bg-black w-auto h-10">
+
+        </footer>
       </div>
     </div>
   );

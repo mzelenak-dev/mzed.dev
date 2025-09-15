@@ -18,7 +18,7 @@ export default async function RootLayout({children}: Readonly<{children: React.R
   
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-gradient relative mx-auto h-full w-full text-slate-400 bg-slate-900 leading-relaxed selection:bg-teal-300 selection:text-teal-900 xl:px-0 lg:py-5 lg:px-5 px-3 py-3`}>
+      <body className={`${inter.className} antialiased bg-gradient relative mx-auto h-full w-full text-slate-400 bg-slate-900 leading-relaxed selection:bg-teal-300 selection:text-teal-900 px-3 py-5 md:px-5 xl:px-0`}>
         <div id="spotlight-overlay" className="hidden lg:block absolute -z-10"></div>
         {children}
         <Spotlight />

@@ -85,7 +85,7 @@ export default function BlogDetail({ post }: { post: Post }) {
                     </time>
                    
                     {post.readingTime && (
-                      <span className="text-sm text-slate-400">· {post.readingTime}</span>
+                      <span className="text-sm text-slate-400">{post.readingTime} read</span>
                     )}
                   </div>
                 </div>
@@ -150,12 +150,6 @@ export default function BlogDetail({ post }: { post: Post }) {
                       <div className="text-xs text-slate-400">{post.readingTime}</div>
                     )}
                   </div>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center px-3 py-1 rounded-md bg-teal-400/10 text-teal-300 text-sm"
-                  >
-                    Subscribe
-                  </Link>
                 </div>
               </div>
 
@@ -166,7 +160,7 @@ export default function BlogDetail({ post }: { post: Post }) {
                   {post.categories?.map((c) => (
                     <span
                       key={c}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-teal-300 w-auto"
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-teal-300"
                     >
                       {c}
                     </span>
@@ -177,7 +171,7 @@ export default function BlogDetail({ post }: { post: Post }) {
                   {post.tags?.map((t) => (
                     <span
                       key={t}
-                      className="inline-flex items-center px-2 py-0.5 rounded text-xs text-slate-300 bg-slate-800/20 w-auto"
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-teal-300"
                     >
                       #{t}
                     </span>
